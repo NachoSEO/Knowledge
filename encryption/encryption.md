@@ -17,7 +17,7 @@ You can encrypt a file using:
 
 SOPS
 ```sh
-  brew install sops
+brew install sops
 ```
 
 GPG
@@ -42,11 +42,12 @@ export GPG_TTY
 3. A file encrypted with a `.gpg` extension will be created
 4. Decrypt: `gpg --decrypt <filename.gpg>`
 
-[More info] (https://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/)
+[More info](https://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/)
 
 
 #### Sign commits
 You can sign commits using your GPG keys in order to verified them in github. When you commit new changes just add the flag `-S`:
+
 `git commit -S -m your commit message`
 
 Be sure that you [tell Git about your key](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
@@ -58,7 +59,7 @@ SOPS will only encrypt the value not the key.
 1. Add a config file in the root `.sops.yaml` with the PGP fingerprint of the public key (Use the  `gpg --list-keys` to get the fingerprint
 ```yaml
 creation_rules:
-  - pgp: 'fingerprint'
+  - pgp: '05DCDCA00197777174F8D9AF2C70C53546A78B7F'
 ```
 2. Encrypt the file: `sops -e <filename>` (to print the output in the console)
     * To save the data encrypted: `sops -e <filename> > <filename_encrypted>`
