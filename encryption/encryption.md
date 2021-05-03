@@ -52,6 +52,10 @@ You can sign commits using your GPG keys in order to verified them in github. Wh
 
 Be sure that you [tell Git about your key](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 
+In the repo that you want to sign you need to add to your config:
+1. `git config user.email <email>`
+2. `git config  user.signingkey <key>`
+
 
 ### SOPS (Secrets Operations)
 SOPS will only encrypt the value not the key.
