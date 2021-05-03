@@ -35,12 +35,12 @@ GPG_TTY=$(tty)
 export GPG_TTY
 ```
 
-1. Generate a key pair: `gpg --gen-key`
-    1. To list all of the keys: `gpg --list-keys`
-2. Encrypt a file attaching to a recipient (i.e 'Nacho Mascort)': `gpg --encrypt --recipient <person_name> <filename>` 
-    1. or `gpg -e -r <person_name> <filename>`
+1. Generate a key pair: `$ gpg --gen-key`
+    1. To list all of the keys: `$ gpg --list-keys`
+2. Encrypt a file attaching to a recipient (i.e 'Nacho Mascort)': `$ gpg --encrypt --recipient <person_name> <filename>` 
+    1. or `$ gpg -e -r <person_name> <filename>`
 3. A file encrypted with a `.gpg` extension will be created
-4. Decrypt: `gpg --decrypt <filename.gpg>`
+4. Decrypt: `$ gpg --decrypt <filename.gpg>`
 
 [More info](https://blog.ghostinthemachines.com/2015/03/01/how-to-use-gpg-command-line/)
 
@@ -48,25 +48,25 @@ export GPG_TTY
 #### Sign commits
 You can sign commits using your GPG keys in order to verified them in github. When you commit new changes just add the flag `-S`:
 
-`git commit -S -m your commit message`
+`$ git commit -S -m your commit message`
 
 Be sure that you [tell Git about your key](https://docs.github.com/en/github/authenticating-to-github/telling-git-about-your-signing-key)
 
 In the repo that you want to sign you need to add to your config:
-1. `git config user.email <email>`
-2. `git config  user.signingkey <key>`
+1. `$ git config user.email <email>`
+2. `$ git config  user.signingkey <key>`
 
 
 ### SOPS (Secrets Operations)
 SOPS will only encrypt the value not the key.
 
-1. Add a config file in the root `.sops.yaml` with the PGP fingerprint of the public key (Use the  `gpg --list-keys` to get the fingerprint
+1. Add a config file in the root `.sops.yaml` with the PGP fingerprint of the public key (Use the `$ gpg --list-keys` to get the fingerprint
 ```yaml
 creation_rules:
   - pgp: '05DCDCA00197777174F8D9AF2C70C53546A78B7F'
 ```
-2. Encrypt the file: `sops -e <filename>` (to print the output in the console)
-    * To save the data encrypted: `sops -e <filename> > <filename_encrypted>`
+2. Encrypt the file: `$ sops -e <filename>` (to print the output in the console)
+    * To save the data encrypted: `$ sops -e <filename> > <filename_encrypted>`
     ```yaml
     key1:
         key2: ENC[AES256_GCM,data:tOOHUw==,iv:6A24EmCX3nDFUW/69hsxHwC6qqgVyr5BdLbr3eoYzCg=,tag:S65s1rjHzukoGgVq19fIxg==,type:str]
@@ -95,7 +95,7 @@ creation_rules:
         version: 3.7.1
     ```
 
-3. Decrypt the file: `sops -d <filename>`
+3. Decrypt the file: `$ sops -d <filename>`
   * Output:
   ```yaml
   key1:
@@ -103,9 +103,9 @@ creation_rules:
   ```
 
 ### Helm secrets
-* View: `helm secrets view <filename>`
-* Encrypt: `helm secrets enc <filename>`
+* View: `$ helm secrets view <filename>`
+* Encrypt: `$ helm secrets enc <filename>`
   * It will encrypt the same input file
-* Decrypt: `helm secrets dec <filename>`
+* Decrypt: `$ helm secrets dec <filename>`
   * It will created a new `.dec` file
-* Decrypt-encrypt: `helm secrets edit <filename>`
+* Decrypt-encrypt: `$ helm secrets edit <filename>`
