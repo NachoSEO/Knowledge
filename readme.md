@@ -5,7 +5,7 @@ In this repo you'll find several notes regarding different types of tech knowled
 
 ##  Index
 * SEO
-* Git
+* [Git](./git/git.md)
 * JS
 * SQL
 * [Docker](./docker/docker.md)
