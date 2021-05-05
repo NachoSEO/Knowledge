@@ -3,6 +3,17 @@
 ## What is Kubernetes?
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
 
+It comes from the latin meaning: *helmsman*
+* Immutable infraestructure: it creates & destroys without changing when it's deployed
+* Uses containers
+* Declarative
+
+### Terminology
+* Pod: Group of one or more containers
+* Namespace: A way to add a different level of separation regarding pods
+* Service: Group of rules to access the pods
+* Volume: it allow us to persist data
+* Deployment: rules to apply when we deploy an app (numbers of pods, specifics resources...)
 
 ## How to launch a process inside K8S
 1. Start connection to kubernetes: `$ kubeon`
@@ -34,3 +45,4 @@ Kubernetes, also known as K8s, is an open-source system for automating deploymen
 * kubectx
 * kubernetes-helm
 * autocomplete for k8s
+* [helm](../helm/helm.md)
