@@ -22,3 +22,6 @@
 15. When the changes are pushed, the terminal will prompt the Pull Review URL. *Command + click* to enter the PR
 16. Put the description in the PR and click the close the branch when merged
 17. When the PR is approved time to merge!
+
+## Useful commands
+* `$ git checkout -b yourBranchName origin/remotebranchname`: How to download a specific branch
