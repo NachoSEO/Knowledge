@@ -13,6 +13,7 @@ In this repo you'll find several notes regarding different types of tech knowled
 * [Kubernetes](./kubernetes/kubernetes.md)
 * [Encryption](./encryption/encryption.md)
 * [Helm](./helm/helm.md)
+* [Skaffold](./skaffold/skaffold.md)
 
 ## Resources used
 * Custom notes
