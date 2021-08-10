@@ -55,6 +55,9 @@ We can add this functions to the CLI using `source <file>` in order that the she
 
 We can use short-circuit with `||`and `&&`.
 
+#### Example functions
+* `dig -t txt <domain.com>` - To see the TXT DNS records of a given domain
+
 #### Useful args
 * `$0` - Name of the script
 * `$1` to `$9` - Arguments to the script. $1 is the first argument and so on.

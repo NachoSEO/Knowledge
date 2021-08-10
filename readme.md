@@ -5,6 +5,7 @@ In this repo you'll find several notes regarding different types of tech knowled
 
 ##  Index
 * SEO
+* [Product Management](./product-management/product-management.md)
 * [Shell](./shell/shell.md)
 * [Git](./git/git.md)
 * JS
@@ -19,3 +20,4 @@ In this repo you'll find several notes regarding different types of tech knowled
 * Custom notes
 * [Helm Workshop from Softonic](https://github.com/softonic/helm-workshop)
 * [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
+* [I Got An Offer](https://igotanoffer.com/) 
