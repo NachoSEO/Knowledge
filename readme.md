@@ -8,6 +8,7 @@ In this repo you'll find several notes regarding different types of tech knowled
 * [Product Management](./product-management/product-management.md)
 * [Shell](./shell/shell.md)
 * [Git](./git/git.md)
+* [RegEx](./regex/regex.md)
 * JS
 * SQL
 * [Docker](./docker/docker.md)
