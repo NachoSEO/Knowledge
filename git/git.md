@@ -26,3 +26,4 @@
 ## Useful commands
 * `$ git checkout -b yourBranchName origin/remotebranchname`: How to download a specific branch
 * `$ git reset HEAD~`: To undo your last commit and leave the previously committed changes unstaged
+* (Useful commands)[https://missing.csail.mit.edu/2020/version-control/]
