@@ -37,6 +37,7 @@ Partly based on [The Missing Semester of Your CS Education](https://missing.csai
   * `paste -sd`: print the output in a single line, with the delimiter `-d` (comma by default)
 * `bc`: Binary Calculator, calculates from the standard input
 * `xargs <command>`: takes a list of inputs and transform them in arguments for a given command
+  * `xargs open < links.txt`: open a list of URLs from a text file
 * `tee`: copy the input to the output and also print the output
 
 
